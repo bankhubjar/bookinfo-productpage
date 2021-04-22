@@ -35,7 +35,7 @@ spec:
     - cat
     tty: true
   - name: java-python
-    image: openkbs/jdk11-mvn-py3:v1.0.9
+    image: saroma/jdk11-python3:latest
     command:
     - cat
     tty: true   
