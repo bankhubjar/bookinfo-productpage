@@ -133,7 +133,7 @@ spec:
             container('java-python') {
                 script {
                     // Install application dependency
-                    sh '''cd src/ && npm install --package-lock && cd ../'''
+                    sh '''pip3 install -r requirements.txt'''
 
                     // Start OWASP Dependency Check
                     dependencyCheck(
@@ -146,8 +146,6 @@ spec:
                         pattern: 'dependency-check-report.xml'
                     )
 
-                    // Remove applocation dependency
-                    sh'''rm -rf src/node_modules src/package-lock.json'''
                 } // End script
             } // End container
         } // End steps
