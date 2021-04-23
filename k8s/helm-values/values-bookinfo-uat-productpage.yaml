@@ -17,6 +17,6 @@ ingress:
   path: "/bank/productpage(/|$)(.*)"
   serviceType: ClusterIP
 extraEnv:
-  DETAILS_HOSTNAME: http://details:8082/
-  RATINGS_HOSTNAME: http://ratings:8081/
-  REVIEWS_HOSTNAME: http://reviews:9080/
+  DETAILS_HOSTNAME: http://bookinfo-prd-details:8082/
+  RATINGS_HOSTNAME: http://bookinfo-prd-ratings:8081/
+  REVIEWS_HOSTNAME: http://bookinfo-prd-reviews:9080/
