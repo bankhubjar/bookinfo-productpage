@@ -4,7 +4,7 @@ FROM python:3.8
 WORKDIR /usr/src/app
 
 COPY . .
-RUN pip install -r /usr/src/app/requirements.txt
+RUN pip3 install -r /usr/src/app/requirements.txt
 
 EXPOSE 9000
 
