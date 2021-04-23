@@ -8,4 +8,4 @@ RUN pip install -r /usr/src/app/requirements.txt
 
 EXPOSE 9000
 
-CMD ["python", "/usr/src/app/productpage.py", "9000"]
+CMD ["python3", "/usr/src/app/productpage.py", "9000"]
