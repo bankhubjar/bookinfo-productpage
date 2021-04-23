@@ -4,7 +4,7 @@ productpage:
   tag: uat
   replicas: 1
   imagePullSecrets: registry-bookinfo
-  port: 8081
+  port: 9000
   healthCheckPath: "/health"
   mongodbPasswordExistingSecret: bookinfo-uat-productpage-mongodb-secret
 ingress:
@@ -17,6 +17,6 @@ ingress:
   path: "/bank/productpage(/|$)(.*)"
   serviceType: ClusterIP
 extraEnv:
-  DETAILS_HOSTNAME: http://details:8082/
-  RATINGS_HOSTNAME: http://ratings:8081/
-  REVIEWS_HOSTNAME: http://reviews:9080/
+  DETAILS_HOSTNAME: http://bookinfo-prd-details:8082/
+  RATINGS_HOSTNAME: http://bookinfo-prd-ratings:8081/
+  REVIEWS_HOSTNAME: http://bookinfo-prd-reviews:9080/
