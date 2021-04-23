@@ -4,7 +4,7 @@ productpage:
   tag: dev
   replicas: 1
   imagePullSecrets: registry-bookinfo
-  port: 8081
+  port: 9000
   healthCheckPath: "/health"
   mongodbPasswordExistingSecret: bookinfo-dev-productpage-mongodb-secret
 ingress:
